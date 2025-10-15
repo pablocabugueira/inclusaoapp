@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  inclusao-app:
+    build: .
+    container_name: inclusao-app
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:oracle:thin:@host.docker.internal:1521/XEPDB1
+      SPRING_DATASOURCE_USERNAME: RM554840
+      SPRING_DATASOURCE_PASSWORD: fiap24
